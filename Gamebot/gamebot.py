@@ -145,7 +145,7 @@ def gamesInfoPage(userID, req):
             root_childsRU[a] = str(root_childsRU[a]).split("Сейчас")[1].split("\n")[0]
         if (str(root_childsBR[b]).find("Agora") != -1):
             root_childsBR[c] = str(root_childsBR[c]).split("Agora")[1].split("\n")[0]
-        print("AA: {} BB: {} CC: {} LEN: {}/{}".format(root_childsRU, root_childsAU, root_childsBR, len(root_childsRU), len(root_childsAU, len(root_childsBR))))
+        print("AA: {} BB: {} CC: {} LEN: {}/{}".format(root_childsRU, root_childsAU, root_childsBR, len(root_childsRU), len(root_childsAU), len(root_childsBR)))
         #print(root_childs[0])
         #print(str(findElement(req, "div", gamePriceTag)[i].text).replace("\n", "").replace("", "").replace("  ","").replace("\r", "").replace("USD$", "").replace("+", "").replace("Бесплатно", "0").replace(",","."))
         try:
