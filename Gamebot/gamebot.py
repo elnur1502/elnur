@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 from vk_api.keyboard import VkKeyboard, VkKeyboardColor
 from vk_api.longpoll import VkLongPoll, VkEventType
 
-token = "ea86fb90200b2818b96490188139f3c6b44b12556d9fdd19e7d01626a3464a446283c3b4335e4b4d730b2" #token
+token = "e615070ecbd0a9642205948dbe49728785555494f701852aabe742313bc7eee4dbdd7447ffeca14003479" #token
 
 # Авторизуемся как сообщество
 vk = vk_api.VkApi(token=token)
