@@ -162,11 +162,11 @@ def gamesInfoPage(userID, req):
             priceAU = (float(float(s) * dob))
         except:
            priceAU = 0
-         try:
+        try:
             x = str(root_childsBR[c].replace("\n", "").replace(" ", "").replace("  ", "").replace("\r", "").replace("R$","").replace(".", "").replace(",00", "").replace("+", "").replace("Grátis", "0"))
             if str(root_childsBR[c].replace("\n", "").replace(" ", "").replace("  ", "").replace("\r", "").replace("R$","").replace(".", "").replace(",00", "").replace("+", "").replace("Grátis", "0")).find(",") != -1:
                 x = str(root_childsBR[c].replace("\n", "").replace(" ", "").replace("  ", "").replace("\r", "").replace("R$","").replace(".", "").replace(",00", "").replace("+", "").replace("Grátis", "0")).split(",")[0]
-            priceBR = (float(float(x) * dob))
+            priceBR = (float(float(x) * 1))
         except:
            priceBR = 0
 
