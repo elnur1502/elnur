@@ -202,7 +202,7 @@ def main():
                                 if int(request) > maximumGames:
                                     write_msg(event.user_id, "Выберите существующие число !")
                                 
-                                    print(str(float(str(shop[int(request)-1]).split("|")[2])) + "|" + str(float(str(shop[int(request)-1]).split("|")[1])) "|" + str(float(str(shop[int(request)-1]).split("|")[3])))
+                                    print(str(float(str(shop[int(request)-1]).split("|")[2])) + "|" + str(float(str(shop[int(request)-1]).split("|")[1])) + "|" + str(float(str(shop[int(request)-1]).split("|")[3])))
                                     write_msg(event.user_id, "Игра: {} \n Цена Ру: {} . \n ".format(str(shop[int(request)-1]).split("|")[0], str(round(float(str(shop[int(request)-1]).split("|")[1])))))
                                     write_msg(event.user_id, "Игра: {} \n Цена Ар: {} . \n ".format(str(shop[int(request)-1]).split("|")[0], str(round(float(str(shop[int(request)-1]).split("|")[2])))))
                                     write_msg(event.user_id, "Игра: {} \n Цена Бр: {} . \n ".format(str(shop[int(request)-1]).split("|")[0], str(round(float(str(shop[int(request)-1]).split("|")[3])))))
