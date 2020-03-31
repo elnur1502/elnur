@@ -199,15 +199,12 @@ def main():
                     if stepsController.getStep(userID=event.user_id) == 1:
                         if str(request).isdigit():
                             if int(request) == 1 or int(request) == 2 or int(request) == 3 or int(request) == 4 or int(request) == 5 or int(request) == 6 or int(request) == 7 or int(request) == 8 or int(request) == 9 or int(request) == 10:
-                                print(str(float(str(shop[int(request)-1]).split("|")[2])) + "|" + str(float(str(shop[int(request)-1]).split("|")[1])) + "|" + str(float(str(shop[int(request)-1]).split("|")[3])))
+                                if int(request) > maximumGames:
+                                    write_msg(event.user_id, "Выберите существующие число !")
+                                    print(str(float(str(shop[int(request)-1]).split("|")[2])) + "|" + str(float(str(shop[int(request)-1]).split("|")[1])) + "|" + str(float(str(shop[int(request)-1]).split("|")[3])))
                                     write_msg(event.user_id, "Игра: {} \n Цена Ру: {} . \n Цена Ар: {} . \n Цена Бр: {} .".format(str(shop[int(request)-1]).split("|")[0], str(round(float(str(shop[int(request)-1]).split("|")[1]))), str(round(float(str(shop[int(request)-1]).split("|")[2]))), str(round(float(str(shop[int(request)-1]).split("|")[3])))))
                                     stepsController.setStep(userID=event.user_id, step=0)
                                     shop .clear()
-
-
-                                if int(request) > maximumGames:
-                                    write_msg(event.user_id, "Выберите существующие число !")
-                                    
                                 
                             if request == "0":
                                 write_msg(event.user_id, "Вы вернулись назад !")
