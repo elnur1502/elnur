@@ -166,7 +166,7 @@ def gamesInfoPage(userID, req):
             x = str(root_childsBR[c].replace("\n", "").replace(" ", "").replace("  ", "").replace("\r", "").replace("R$","").replace(".", "").replace(",00", "").replace("+", "").replace("Grátis", "0"))
             if str(root_childsBR[c].replace("\n", "").replace(" ", "").replace("  ", "").replace("\r", "").replace("R$","").replace(".", "").replace(",00", "").replace("+", "").replace("Grátis", "0")).find(",") != -1:
                 x = str(root_childsBR[c].replace("\n", "").replace(" ", "").replace("  ", "").replace("\r", "").replace("R$","").replace(".", "").replace(",00", "").replace("+", "").replace("Grátis", "0")).split(",")[0]
-            priceBR = (float(float(x) * 1))
+            priceBR = (float(float(x) * 90))
         except:
            priceBR = 0
 
@@ -203,11 +203,11 @@ def main():
                                     write_msg(event.user_id, "Выберите существующие число !")
                                 if float(str(shop[int(request)-1]).split("|")[1]) > float(str(shop[int(request)-1]).split("|")[2]):
                                     print(str(float(str(shop[int(request)-1]).split("|")[2])) + "|" + str(float(str(shop[int(request)-1]).split("|")[1])) + "|" + str(float(str(shop[int(request)-1]).split("|")[3])))
-                                    write_msg(event.user_id, "Игра: {} \n Цена Ру: {} руб. \n Цена Ар: {} песо. \n Цена Бр: {} реал.".format(str(shop[int(request)-1]).split("|")[0], str(round(float(str(shop[int(request)-1]).split("|")[1]))), str(round(float(str(shop[int(request)-1]).split("|")[2]))), str(round(float(str(shop[int(request)-1]).split("|")[3])))))
+                                    write_msg(event.user_id, "Игра: {} \n Цена Ру: {} руб. \n Цена Ар: {} руб. \n Цена Бр: {} руб.".format(str(shop[int(request)-1]).split("|")[0], str(round(float(str(shop[int(request)-1]).split("|")[1]))), str(round(float(str(shop[int(request)-1]).split("|")[2]))), str(round(float(str(shop[int(request)-1]).split("|")[3])))))
                                     stepsController.setStep(userID=event.user_id, step=0)
                                     shop .clear()
                                 else:
-                                    write_msg(event.user_id, "Игра: {} \n Цена Ру: {} руб. \n Цена Ар: {} песо. \n Цена Бр: {} реал.".format(str(shop[int(request)-1]).split("|")[0], str(round(float(str(shop[int(request)-1]).split("|")[1]))), str(round(float(str(shop[int(request)-1]).split("|")[2]))), str(round(float(str(shop[int(request)-1]).split("|")[3])))))
+                                    write_msg(event.user_id, "Игра: {} \n Цена Ру: {} руб. \n Цена Ар: {} руб. \n Цена Бр: {} руб.".format(str(shop[int(request)-1]).split("|")[0], str(round(float(str(shop[int(request)-1]).split("|")[1]))), str(round(float(str(shop[int(request)-1]).split("|")[2]))), str(round(float(str(shop[int(request)-1]).split("|")[3])))))
                                     stepsController.setStep(userID=event.user_id, step=0)
                                     shop .clear()  
                             if request == "0":
