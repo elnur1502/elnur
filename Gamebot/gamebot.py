@@ -203,13 +203,13 @@ def main():
                                     write_msg(event.user_id, "Выберите существующие число !")
                                 if float(str(shop[int(request)-1]).split("|")[1]) > float(str(shop[int(request)-1]).split("|")[2]):
                                     print(str(float(str(shop[int(request)-1]).split("|")[2])) + "|" + str(float(str(shop[int(request)-1]).split("|")[1])) + "|" + str(float(str(shop[int(request)-1]).split("|")[3])))
-                                    write_msg(event.user_id, "Игра: {} \n Цена Ру: {} . \n Цена Ар: {} . \n Цена Бр: {} .".format(str(shop[int(request)-1]).split("|")[0], str(round(float(str(shop[int(request)-1]).split("|")[1]))), str(round(float(str(shop[int(request)-1]).split("|")[2]))), str(round(float(str(shop[int(request)-1]).split("|")[3])))))
+                                    write_msg(event.user_id, "Игра: {} \n Цена Ру: {} руб. \n Цена Ар: {} песо. \n Цена Бр: {} реал.".format(str(shop[int(request)-1]).split("|")[0], str(round(float(str(shop[int(request)-1]).split("|")[1]))), str(round(float(str(shop[int(request)-1]).split("|")[2]))), str(round(float(str(shop[int(request)-1]).split("|")[3])))))
                                     stepsController.setStep(userID=event.user_id, step=0)
                                     shop .clear()
                                 else:
-                                    write_msg(event.user_id, "Обратитесь к продавцу за дополнительной информацией - {}! \n Вы вернулись назад !".format(str(getShortLink("https://vk.com/elnursh15"))))
+                                    write_msg(event.user_id, "Игра: {} \n Цена Ру: {} руб. \n Цена Ар: {} песо. \n Цена Бр: {} реал.".format(str(shop[int(request)-1]).split("|")[0], str(round(float(str(shop[int(request)-1]).split("|")[1]))), str(round(float(str(shop[int(request)-1]).split("|")[2]))), str(round(float(str(shop[int(request)-1]).split("|")[3])))))
                                     stepsController.setStep(userID=event.user_id, step=0)
-                                    shop.clear()    
+                                    shop .clear()  
                             if request == "0":
                                 write_msg(event.user_id, "Вы вернулись назад !")
                                 shop.clear()
